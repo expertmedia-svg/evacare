@@ -22,7 +22,7 @@ def get_cors_origins() -> list[str]:
 cors_origins = get_cors_origins()
 
 app = FastAPI(
-    title="HERBACARE AI",
+    title="EVACARE",
     description="Plateforme africaine de bien-être et médecine traditionnelle",
     version="1.0.0"
 )
@@ -55,4 +55,4 @@ app.include_router(ai_assistant.router, prefix="/ai", tags=["Assistant IA"])
 
 @app.get("/")
 def root():
-    return {"message": "HERBACARE AI API", "docs": "/docs", "version": "1.0.0"}
+    return {"message": "EVACARE API", "docs": "/docs", "version": "1.0.0"}

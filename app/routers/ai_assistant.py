@@ -48,7 +48,7 @@ def _build_rule_based_response(recommended_products, matched_advice):
         return response
 
     return (
-        "Bonjour ! Je suis votre assistant bien-être HerbaIA. Décrivez-moi vos symptômes ou besoins pour que je vous propose des "
+        "Bonjour ! Je suis votre assistant bien-être EvaIA. Décrivez-moi vos symptômes ou besoins pour que je vous propose des "
         "solutions naturelles adaptées.\n\nExemples : fatigue, ulcère, prostate, diabète, beauté, minceur...\n\n"
         f"⚠️ {HEALTH_WARNING}"
     )
@@ -69,7 +69,7 @@ def _generate_gemini_response(message, language, recommended_products, matched_a
     advice_text = " ".join(list(set(matched_advice))) if matched_advice else "Aucun conseil local spécifique."
     response_language = "français" if language.lower().startswith("fr") else language
     prompt = (
-        "Tu es HerbaIA, un assistant bien-être pour une boutique de médecine traditionnelle. "
+        "Tu es EvaIA, un assistant bien-être pour une boutique de médecine traditionnelle. "
         f"Réponds uniquement en {response_language}. "
         "Tu dois rester prudent: pas de diagnostic médical, pas de promesse de guérison, et rappeler que cela ne remplace pas un professionnel de santé. "
         "Rédige une réponse courte, claire et utile. Si des produits locaux sont fournis, appuie-toi dessus sans inventer d'autres produits. "
